@@ -8,7 +8,7 @@ export default {
     const router = useRouter()
 
     const handleSubmit = async e => {
-      const [email, password] = e.target.elements
+      const { email, password } = e.target.elements
       try {
         await signInWithEmailAndPassword(auth, email.value, password.value)
         router.push('/')
@@ -25,8 +25,8 @@ export default {
 <template>
   <h1>Login</h1>
   <form @submit.prevent="handleSubmit">
-    <input placeholder="email" type="email" />
-    <input placeholder="password" type="password" />
+    <input name="email" placeholder="email" type="email" />
+    <input name="password" placeholder="password" type="password" />
     <button type="submit">Login</button>
   </form>
 </template>
