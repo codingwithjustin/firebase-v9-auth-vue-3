@@ -25,7 +25,7 @@ export default {
 <template>
   <h1>Login</h1>
   <form @submit.prevent="handleSubmit">
-    <input placeholder="email" />
+    <input placeholder="email" type="email" />
     <input placeholder="password" type="password" />
     <button type="submit">Login</button>
   </form>
